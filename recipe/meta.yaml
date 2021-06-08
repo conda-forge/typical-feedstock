@@ -1,5 +1,5 @@
 {% set name = "typical" %}
-{% set version = "2.1.3" %}
+{% set version = "2.2.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/typical-{{ version }}.tar.gz
-  sha256: a0065cdac1a097d62fbd0b8ef0d380c0cd36764b379141acdd2d17b414e27381
+  sha256: fad5e8a2e7e2c8fcd5633a3166530eb42d8684544d713e0055f2f7402c4b7658
 
 build:
   number: 0
@@ -22,8 +22,10 @@ requirements:
     - python >=3.6
   run:
     - inflection >=0.3.1,<0.4.0
+    - mypy
     - pendulum >=2.1,<3.0
     - python >=3.6
+    - typing-extensions
 
 test:
   imports:
