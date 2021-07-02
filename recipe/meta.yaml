@@ -1,5 +1,5 @@
 {% set name = "typical" %}
-{% set version = "2.3.0" %}
+{% set version = "2.3.2" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/typical-{{ version }}.tar.gz
-  sha256: 9d79e2d272e4af0c5b48f03ff1b3e3e9c8d564c0524c1aecd0f162f8bb1261d7
+  sha256: 5d08af2221de57c9ad48b3b78a8d6f5040e88f91db1656b0b2badd02cdb42550
 
 build:
   number: 0
@@ -21,7 +21,7 @@ requirements:
     - poetry
     - python >=3.6
   run:
-    - inflection >=0.3.1,<0.4.0
+    - inflection >=0.5,<0.6
     - mypy
     - pendulum >=2.1,<3.0
     - python >=3.6
