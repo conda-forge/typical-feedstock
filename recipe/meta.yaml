@@ -1,5 +1,5 @@
 {% set name = "typical" %}
-{% set version = "2.7.4" %}
+{% set version = "2.7.5" %}
 
 
 package:
@@ -8,12 +8,15 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/typical-{{ version }}.tar.gz
-  sha256: d74fb8fa5301846dc42b84fce32d54f7234ca8ec78e04088a9b9974dab8d515d
+  sha256: 90eb14a8fecdad92f057f12a4d828c6b958f29fe752b167893baa60fbdaef6ba
 
 build:
   number: 0
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script:
+    # Removing pyproject.toml here due to pip bug
+    - {{ PYTHON }} -c "__import__('os').unlink('pyproject.toml')"
+    - {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
