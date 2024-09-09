@@ -1,5 +1,5 @@
 {% set name = "typical" %}
-{% set version = "2.8.1" %}
+{% set version = "2.9.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/typical-{{ version }}.tar.gz
-  sha256: 9d9a892ea78078a2b173508fdda4993d36eb989c3bded5300515ff100fe3d362
+  sha256: b8fcf86dce410c59cedd0c4a2a80d1b70e11bbe6fe343b81bfa5b303eedc5343
 
 build:
   number: 0
